@@ -1,16 +1,28 @@
-# flutter_templates
+# Flutter Templates
+Starter template to get started with flutter projects
 
-A new Flutter project.
+## Sections
 
-## Getting Started
+#### Helpers
+- constants
+- validators
 
-This project is a starting point for a Flutter application.
+#### Models
+- user model
 
-A few resources to get you started if this is your first Flutter project:
+#### Providers
+- user provider
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+#### Services
+- auth services
+- firebase storage services
+- get token
+- notification services
+- timestamp converter
+- user services
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#### Widgets
+- appbar
+- button
+- image viewer
+- text field
