@@ -1,7 +1,5 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:flutter_templates/helpers/constants.dart';
+import '../helpers/constants.dart';
 
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget({

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_templates/helpers/constants.dart';
-import 'package:flutter_templates/widgets/appbar_widget.dart';
 import 'package:lottie/lottie.dart';
+import 'appbar_widget.dart';
+import '../helpers/constants.dart';
 
 class NoDataWidget extends StatelessWidget {
   const NoDataWidget({
