@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../models/user_model.dart';
+import '../providers/user_provider.dart';
 
 class UserServices {
   final CollectionReference _userCollection =
@@ -10,6 +13,19 @@ class UserServices {
     return _userCollection.snapshots().map((snapshot) => snapshot.docs
         .map((doc) => UserModel.fromJson(doc.data() as Map<String, dynamic>))
         .toList());
+  }
+
+  Stream<UserModel?> getUserStream(String uid, BuildContext context) {
+    return _userCollection.doc(uid).snapshots().map((snapshot) {
+      if (snapshot.exists) {
+        final data = snapshot.data() as Map<String, dynamic>;
+        Provider.of<UserProvider>(context, listen: false)
+            .setUser(UserModel.fromJson(data));
+
+        return UserModel.fromJson(data);
+      }
+      return null;
+    });
   }
 
   Future<UserModel?> getUser(String uid) async {

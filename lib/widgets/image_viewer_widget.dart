@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:custom_full_image_screen/custom_full_image_screen.dart';
 import 'package:flutter/material.dart';
 

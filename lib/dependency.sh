@@ -18,6 +18,7 @@ flutter pub add http:0.13.5
 flutter pub add intl:0.18.0
 flutter pub add lottie:2.3.1
 flutter pub add timezone:0.9.1
+flutter pub add provider:6.0.5
 
 flutter clean 
 flutter pub get

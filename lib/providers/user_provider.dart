@@ -8,6 +8,11 @@ class UserProvider with ChangeNotifier {
 
   UserModel? get currentUser => _currentUser;
 
+  void setUser(UserModel userModel) {
+    _currentUser = userModel;
+    notifyListeners();
+  }
+
   // Get current user and store it in provider
   Future<void> fetchUser(String uid) async {
     UserModel? userModel = await UserServices().getUser(uid);
@@ -35,35 +40,11 @@ class UserProvider with ChangeNotifier {
         case 'name':
           _currentUser!.name = value;
           break;
-        case 'prn':
-          _currentUser!.prn = value;
-          break;
         case 'email':
           _currentUser!.email = value;
           break;
         case 'imageUrl':
           _currentUser!.imageUrl = value;
-          break;
-        case 'year':
-          _currentUser!.year = value;
-          break;
-        case 'passOutYear':
-          _currentUser!.passOutYear = value;
-          break;
-        case 'adminCategory':
-          _currentUser!.adminCategory = value;
-          break;
-        case 'branch':
-          _currentUser!.branch = value;
-          break;
-        case 'uid':
-          _currentUser!.uid = value;
-          break;
-        case 'bookmarkNotices':
-          _currentUser!.bookmarkNotices = value;
-          break;
-        case 'isAdmin':
-          _currentUser!.isAdmin = value;
           break;
 
         default:

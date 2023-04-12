@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'appbar_widget.dart';
+
 import '../helpers/constants.dart';
+import 'appbar_widget.dart';
 
 class NoDataWidget extends StatelessWidget {
   const NoDataWidget({
